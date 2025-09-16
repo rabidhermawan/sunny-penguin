@@ -1,16 +1,60 @@
 <style>
-    .bgcanvas {background :#ffffff;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 247, 255, 1) 50%, rgba(0, 162, 255, 1) 100%);
-    }
+  body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  canvas {
+    padding-top: 2rem;
+  }
+
+.canvas {
+    display: inline-block;   /* shrink-wrap to content */
+    max-width: 960px;  
+}
+
+.canvasTitle {
+    display: flex;
+    justify-content: center;
+}
+
+.canvasTitle p {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.canvasContent {
+    word-wrap: break-word;   /* prevent long words from overflowing */
+}
+
 </style>    
 <body>
-    <canvas id='myCanvas'
+    <div class="canvas">
+        <canvas id='myCanvas'
         class="bgcanvas"
-        style="background-color: grey" 
         width="960" 
         height="540">
-    
-    </canvas>
+        </canvas>
+        <div class="canvasTitle">
+            <h1>
+                Sunnyside Penguin
+            </h1>
+            <p>
+                16th September
+            </p>
+        </div>
+                <div class="canvasContent">
+            <p>This HTML canvas art is created as an assignment for Comptuer Graphics - I class. This art depicts a penguin in a sunny beach, creating a juxaposition between the naturally preferring cold Penguin to the hot sunny beach environment.</p>
+            <p>
+                The transformation applied happens at the drawPenguin() function. All of the elements were drawn at 640x480 then applied transformation such as scaling and rotation. Transformation is applied by using the translate() method for moving the penguin through x and y, rotate() to apply rotation with radian value. Lastly scale() is used to scale the penguin to become bigger or smaller.
+            </p>
+            <p>
+                The usage of functions enables the reuse of the penguin element multiple times and can be adjusted individually as the image above has shown.
+            </p>
+        </div>
+    </div>
 </body>
 
 <script>
